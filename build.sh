@@ -22,7 +22,7 @@ cp Resources/noise.png "$APP/Contents/Resources/noise.png"
 ARCH="$(uname -m)"
 TARGET="$ARCH-apple-macos13.0"
 
-echo "正在编译 Risetta（$ARCH）..."
+echo "正在编译 Risetta ($ARCH)..."
 swiftc -O -swift-version 5 -target "$TARGET" \
   -framework AppKit \
   -framework SwiftUI \
