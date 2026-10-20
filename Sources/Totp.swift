@@ -169,7 +169,7 @@ enum Totp {
         case "SHA512":
             return Data(HMAC<SHA512>.authenticationCode(for: message, using: symmetricKey))
         default:
-            return Data(HMAC<SHA1>.authenticationCode(for: message, using: symmetricKey))
+            return Data(HMAC<Insecure.SHA1>.authenticationCode(for: message, using: symmetricKey))
         }
     }
 }
